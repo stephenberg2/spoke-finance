@@ -1,3 +1,4 @@
 [submodule "metrics hub"]
 	path = metrics hub
 	url = https://github.com/stephenberg2/hub.git
+	branch = production
