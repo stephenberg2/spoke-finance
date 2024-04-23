@@ -1,5 +1,61 @@
 unique_name: Finance
 object_type: model
 label: Finance
-metrics: []
-relationships: []
+metrics:
+  - unique_name: Sales Amount
+  - unique_name: Order Quantity
+  - unique_name: Customer Count
+relationships:
+  - unique_name: factinternetsales_orderdatekey_to_Date Dimension_DayMonth
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - orderdatekey
+    role_play: Order {0}
+    to:
+      dimension: Date Dimension
+      level: DayMonth
+  - unique_name: factinternetsales_shipdatekey_to_Date Dimension_DayMonth
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - shipdatekey
+    role_play: Ship {0}
+    to:
+      dimension: Date Dimension
+      level: DayMonth
+  - unique_name: factinternetsales_orderdatekey_to_Date Dimension_Reporting_Day
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - orderdatekey
+    role_play: Order {0}
+    to:
+      dimension: Date Dimension
+      level: Reporting_Day
+  - unique_name: factinternetsales_orderdatekey_to_Date Dimension_customday
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - orderdatekey
+    role_play: Order {0}
+    to:
+      dimension: Date Dimension
+      level: customday
+  - unique_name: factinternetsales_shipdatekey_to_Date Dimension_Reporting_Day
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - shipdatekey
+    role_play: Ship {0}
+    to:
+      dimension: Date Dimension
+      level: Reporting_Day
+  - unique_name: factinternetsales_shipdatekey_to_Date Dimension_customday
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - shipdatekey
+    to:
+      dimension: Date Dimension
+      level: customday
