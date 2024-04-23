@@ -59,3 +59,11 @@ relationships:
     to:
       dimension: Date Dimension
       level: customday
+  - unique_name: factinternetsales_productkey_to_Product Dimension_Product Name
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - productkey
+    to:
+      dimension: Product Dimension
+      level: Product Name
