@@ -2,9 +2,9 @@ unique_name: Finance Model
 object_type: model
 label: Finance Team Model
 metrics:
-  - unique_name: Sales Amount
-  - unique_name: Order Quantity
-  - unique_name: Customer Count
+  - unique_name: salesamount
+  - unique_name: orderquantity
+  - unique_name: customercount
 relationships:
   - unique_name: factinternetsales_orderdatekey_to_Date Dimension_DayMonth
     from:
