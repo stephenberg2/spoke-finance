@@ -1,6 +1,6 @@
-unique_name: Finance
+unique_name: Finance Model
 object_type: model
-label: Finance
+label: Finance Team Model
 metrics:
   - unique_name: Sales Amount
   - unique_name: Order Quantity
