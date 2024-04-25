@@ -1,0 +1,6 @@
+unique_name: Finance Order Dimension
+object_type: dimension
+label: Finance Order Dimension
+hierarchies: []
+level_attributes: []
+type: standard
