@@ -19,4 +19,4 @@ columns:
   - name: ordernumberlinekey
     data_type: string
 connection_id: snowflake
-table: dimorder
+table: DIMORDER

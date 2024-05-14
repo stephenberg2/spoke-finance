@@ -67,3 +67,15 @@ relationships:
     to:
       dimension: Product Dimension
       level: Product Name
+  - unique_name: >-
+      factinternetsales_salesorderlinenumber_to_Finance Order Dimension_Order
+      Line Item
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - salesordernumber
+        - currencykey
+        - salesorderlinenumber
+    to:
+      dimension: Finance Order Dimension
+      level: Order Line Item

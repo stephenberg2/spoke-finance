@@ -1,6 +1,57 @@
 unique_name: Finance Order Dimension
 object_type: dimension
 label: Finance Order Dimension
-hierarchies: []
-level_attributes: []
+hierarchies:
+  - unique_name: Finance Order Hierarchy
+    label: Finance Order Hierarchy
+    description: finance orders
+    filter_empty: 'yes'
+    folder: Finance Order Attributes
+    levels:
+      - unique_name: Currency
+      - unique_name: Order
+      - unique_name: Order Line Item
+level_attributes:
+  - unique_name: Order Line Item
+    label: Order Line Item
+    allowed_calcs_for_dma:
+      - Lag
+      - Ancestor
+      - Descendants
+      - Siblings
+    contains_unique_names: false
+    dataset: finance dimorder
+    is_unique_key: true
+    key_columns:
+      - salesordernumber
+      - currencykey
+      - salesorderlinenumber
+    name_column: salesorderlinenumber
+  - unique_name: Order
+    label: Order
+    allowed_calcs_for_dma:
+      - Lag
+      - Ancestor
+      - Descendants
+      - Siblings
+    contains_unique_names: false
+    dataset: finance dimorder
+    is_unique_key: false
+    key_columns:
+      - salesordernumber
+      - currencykey
+    name_column: salesordernumber
+  - unique_name: Currency
+    label: Currency
+    allowed_calcs_for_dma:
+      - Lag
+      - Ancestor
+      - Descendants
+      - Siblings
+    contains_unique_names: false
+    dataset: finance dimorder
+    is_unique_key: false
+    key_columns:
+      - currencykey
+    name_column: currency_name
 type: standard
