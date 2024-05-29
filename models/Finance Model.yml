@@ -6,8 +6,9 @@ metrics:
   - unique_name: orderquantity
   - unique_name: customercount
   - unique_name: Reference Hub Metric
-  - unique_name: Reference Hub Metric 2
   - unique_name: Average Last Product Unit Count per Order
+  - unique_name: Reference Hub Metric 2
+  - unique_name: lastproductunitprice
 relationships:
   - unique_name: factinternetsales_orderdatekey_to_Date Dimension_DayMonth
     from:
