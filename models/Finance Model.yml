@@ -5,6 +5,8 @@ metrics:
   - unique_name: salesamount
   - unique_name: orderquantity
   - unique_name: customercount
+  - unique_name: Reference Hub Metric
+  - unique_name: Reference Hub Metric 2
 relationships:
   - unique_name: factinternetsales_orderdatekey_to_Date Dimension_DayMonth
     from:
@@ -79,3 +81,11 @@ relationships:
     to:
       dimension: Finance Order Dimension
       level: Order Line Item
+  - unique_name: factinternetsales_customerkey_to_Customer Dimension_Customer Name
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - customerkey
+    to:
+      dimension: Customer Dimension
+      level: Customer Name

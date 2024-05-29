@@ -1,0 +1,5 @@
+unique_name: Reference Hub Metric
+object_type: metric_calc
+label: Reference Hub Metric
+expression: '[Measures].[salesamount] + 100'
+is_hidden: false

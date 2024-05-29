@@ -1,0 +1,5 @@
+unique_name: Reference Hub Metric 2
+object_type: metric_calc
+label: Reference Hub Metric 2
+expression: '[Measures].[Average Last Product Unit Count per Order] + 100'
+is_hidden: false
